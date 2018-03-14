@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array  name="home_tabs">
+        <item>推荐</item>
+        <item>足球</item>
+        <item>篮球</item>
+        <item>电竞</item>
+    </string-array >
+</resources>
