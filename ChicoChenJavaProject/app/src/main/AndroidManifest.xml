@@ -31,6 +31,10 @@
         <activity
             android:name=".ui.open.objectbox.ObjectBoxActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ui.open.objectbox.AddUserActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

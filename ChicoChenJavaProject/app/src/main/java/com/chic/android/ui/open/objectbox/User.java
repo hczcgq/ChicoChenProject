@@ -1,5 +1,6 @@
 package com.chic.android.ui.open.objectbox;
 
+
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
 import io.objectbox.annotation.Generated;
@@ -10,7 +11,7 @@ import io.objectbox.annotation.apihint.Internal;
  */
 
 @Entity
-public class User {
+public class User{
 
     @Id
     long id;
@@ -35,4 +36,14 @@ public class User {
     }
 
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", age='" + age + '\'' +
+                ", sex='" + sex + '\'' +
+                '}';
+    }
 }

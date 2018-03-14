@@ -41,10 +41,13 @@ public abstract class BaseActivity extends AppCompatActivity {
         StatusBarUtil.setColor(this, getResources().getColor(R.color.colorPrimary), 1);
     }
 
+    protected void getIntentData(){}
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         setStatusBarFontDark(true);
         super.onCreate(savedInstanceState);
+        getIntentData();
         setContentView(getContentViewId());
         ButterKnife.bind(this);
         setStatusBar();

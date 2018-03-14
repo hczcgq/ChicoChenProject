@@ -1,16 +1,16 @@
 package com.chic.android.ui.open.objectbox;
 
-import android.app.Application;
-import android.net.Uri;
-import android.os.Bundle;
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chic.android.AppApplication;
 import com.chic.android.R;
 import com.chic.android.base.BaseActivity;
@@ -34,6 +34,7 @@ public class ObjectBoxActivity extends BaseActivity {
     RecyclerView recyclerView;
 
     private UserAdapter mAdapter;
+    private Box<User> boxStore;
 
     @Override
     protected int getContentViewId() {
@@ -50,18 +51,27 @@ public class ObjectBoxActivity extends BaseActivity {
         mToolbar.setNavigationIcon(R.drawable.icon_back);
         toolbarTitle.setText(R.string.address_book);
 
-        Box<User> boxStore = AppApplication.getInstance().getBoxStore().boxFor(User.class);
-        List<User> userList = boxStore.getAll();
-
-        if (userList != null && userList.size() > 0) {
-            return;
-        }
 
         if (mAdapter == null) {
-            mAdapter = new UserAdapter(R.layout.item_user, userList);
+            mAdapter = new UserAdapter(R.layout.item_user, getUser());
             recyclerView.setAdapter(mAdapter);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
         }
+        mAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                User user = (User) adapter.getData().get(position);
+                AddUserActivity.startActivity(ObjectBoxActivity.this, user.id, 100);
+            }
+        });
+    }
+
+    private List<User> getUser() {
+        if (boxStore == null) {
+            boxStore = AppApplication.getInstance().getBoxStore().boxFor(User.class);
+        }
+        List<User> userList = boxStore.getAll();
+        return userList;
     }
 
     @Override
@@ -74,11 +84,19 @@ public class ObjectBoxActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.item_add:
+                AddUserActivity.startActivity(this, -1, 100);
                 break;
-            case R.id.home:
+            case android.R.id.home:
                 finish();
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == RESULT_OK && requestCode == 100) {
+            mAdapter.setNewData(getUser());
+        }
     }
 }
