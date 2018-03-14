@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ChicoChenJavaProject</string>
+
+
+    <string name="main_tab_open">开源</string>
+    <string name="main_tab_widget">组件</string>
+    <string name="main_tab_feature">功能</string>
+
+    <string name="address_book">通讯录</string>
+</resources>

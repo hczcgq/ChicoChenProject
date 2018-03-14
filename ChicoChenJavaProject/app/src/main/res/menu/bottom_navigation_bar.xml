@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_feature"
+        android:icon="@drawable/main_tab_feature"
+        android:title="@string/main_tab_feature" />
+
+    <item
+        android:id="@+id/navigation_open"
+        android:checked="true"
+        android:icon="@drawable/main_tab_open"
+        android:title="@string/main_tab_open" />
+
+    <item
+        android:id="@+id/navigation_widget"
+        android:icon="@drawable/main_tab_widget"
+        android:title="@string/main_tab_widget" />
+
+</menu>
