@@ -35,6 +35,12 @@
         <activity
             android:name=".ui.open.objectbox.AddUserActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".ui.feature.suspend.SuspendActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".ui.feature.suspend.SuspendMoreActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

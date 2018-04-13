@@ -57,6 +57,8 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
             case R.id.navigation_widget:
                 showFragment(FRAGMENT_WIDGET);
                 break;
+            default:
+                break;
         }
         return true;
     }
@@ -92,6 +94,8 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
                     ft.show(widgetFragment);
                 }
                 break;
+            default:
+                break;
 
         }
         ft.commit();
@@ -110,7 +114,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         }
     }
 
-    private void setMainTitle(int index){
+    private void setMainTitle(int index) {
         switch (index) {
             case FRAGMENT_FEATURE:
                 titleText.setText(R.string.main_tab_feature);

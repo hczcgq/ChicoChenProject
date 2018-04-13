@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ChicoChenJavaProject.iml" filepath="$PROJECT_DIR$/ChicoChenJavaProject.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ChicoChenJavaProject.iml" filepath="$PROJECT_DIR$/ChicoChenJavaProject.iml" />
+      <module fileurl="file://E:\Chico\ChicoChenProject\ChicoChenJavaProject\ChicoChenJavaProject.iml" filepath="E:\Chico\ChicoChenProject\ChicoChenJavaProject\ChicoChenJavaProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\Chico\ChicoChenProject\ChicoChenJavaProject\app\app.iml" filepath="E:\Chico\ChicoChenProject\ChicoChenJavaProject\app\app.iml" />
     </modules>
   </component>
 </project>
