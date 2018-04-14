@@ -11,11 +11,15 @@ import com.chic.android.R;
 import com.chic.android.base.BaseActivity;
 import com.chic.android.ui.feature.FeatureFragment;
 import com.chic.android.ui.open.OpenFragment;
+import com.chic.android.ui.tool.ToolFragment;
 import com.chic.android.ui.widget.WidgetFragment;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 import butterknife.BindView;
 
+/**
+ * @author chicochen
+ */
 public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     private static final int FRAGMENT_FEATURE = 0;
@@ -25,6 +29,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     private OpenFragment openFragment;
     private FeatureFragment featureFragment;
     private WidgetFragment widgetFragment;
+    private ToolFragment toolFragment;
 
     @BindView(R.id.bottom_view)
     BottomNavigationViewEx bottomView;
