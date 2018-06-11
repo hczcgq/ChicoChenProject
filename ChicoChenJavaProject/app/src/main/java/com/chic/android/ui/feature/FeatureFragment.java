@@ -7,6 +7,7 @@ import com.chic.android.R;
 import com.chic.android.baen.ClassBean;
 import com.chic.android.base.BaseFragment;
 import com.chic.android.ui.ItemAdapter;
+import com.chic.android.ui.feature.cardview.ViewPagerCardViewActivity;
 import com.chic.android.ui.feature.suspend.SuspendActivity;
 import com.chic.android.ui.feature.viewpager.ViewPagerActivity;
 
@@ -44,6 +45,7 @@ public class FeatureFragment extends BaseFragment {
         List<ClassBean> list = new ArrayList<>();
         list.add(new ClassBean("ViewPager动画效果", ViewPagerActivity.class));
         list.add(new ClassBean("悬浮标题", SuspendActivity.class));
+        list.add(new ClassBean("ViewPager+CardView",ViewPagerCardViewActivity.class));
         return list;
     }
 }

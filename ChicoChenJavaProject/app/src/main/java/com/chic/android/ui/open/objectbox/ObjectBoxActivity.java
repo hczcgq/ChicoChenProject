@@ -44,7 +44,6 @@ public class ObjectBoxActivity extends BaseActivity {
     @Override
     protected void initActivity() {
 
-
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP
                 | ActionBar.DISPLAY_SHOW_HOME);
