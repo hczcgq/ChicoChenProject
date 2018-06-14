@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_normal"
+        android:title="normal"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/item_emboss"
+        android:title="emboss"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/item_blur"
+        android:title="blur"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/item_clear"
+        android:title="clear"
+        app:showAsAction="ifRoom" />
+
+
+</menu>

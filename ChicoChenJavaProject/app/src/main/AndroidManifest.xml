@@ -3,12 +3,12 @@
     package="com.chic.android">
 
     <application
+        android:name=".AppApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".AppApplication"
         android:theme="@style/AppTheme">
         <activity
             android:name=".ui.MainActivity"
@@ -36,13 +36,20 @@
             android:name=".ui.open.objectbox.AddUserActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <activity android:name=".ui.feature.suspend.SuspendActivity"
+        <activity
+            android:name=".ui.feature.suspend.SuspendActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <activity android:name=".ui.feature.suspend.SuspendMoreActivity"
+        <activity
+            android:name=".ui.feature.suspend.SuspendMoreActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <activity android:name=".ui.feature.cardview.ViewPagerCardViewActivity"
+        <activity
+            android:name=".ui.feature.cardview.ViewPagerCardViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ui.feature.paint.PaintCanvasActivity"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
